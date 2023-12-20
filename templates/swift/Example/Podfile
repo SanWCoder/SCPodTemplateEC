@@ -10,6 +10,8 @@ target '${POD_NAME}_Example' do
 #  # Pods-for-testing
 #  pod 'UtilsKit',                           :path => '../../../UtilsKit/Trunk'
 
+  pod 'HCYMediatorKit',      :path => '../../../HCYMediatorKit/Trunk'
+
   pod '${POD_NAME}', :path => '../'
 
   pod 'SwiftFormat/CLI'    ,"0.50.1"

@@ -50,8 +50,22 @@ module Pod
 
       # There has to be a single file in the Classes dir
       # or a framework won't be created
-      `touch Pod/Classes/ReplaceMe.swift`
-
+      `touch Pod/Classes/HCYMediator+Ext.swift`
+      `echo '// \
+      //  HCYMediator+Ext.swift \
+      //  ${POD_NAME} \
+      // \
+      //  Created by ${USER_NAME} on ${DATE}. \
+      // \
+       \
+      import HCYMediatorKit \
+          \
+      public extension HCYMediator { \
+          @objc func ${POD_NAME}Controller(parameters: [String: Any]?, callback: @escaping ([String: Any]) -> Void) -> UIViewController? { \
+              return nil \
+          } \
+      }' >> Pod/Classes/HCYMediator+Ext.swift`
+      
       `mv ./templates/swift/* ./`
 
       # remove podspec for osx
