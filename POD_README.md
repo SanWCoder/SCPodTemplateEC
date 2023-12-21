@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```
 // 创建iOS组件项目
 
-~ pod lib create {PROJECT_NAME} --template-url=https://github.com/SanWCoder/PodTemplate.git
+~ pod lib create {PROJECT_NAME} --template-url=http://172.16.10.25:9999/common_ios_package/Template/HCYPodTemplateEC.git
 
 ```
 ### 提交
