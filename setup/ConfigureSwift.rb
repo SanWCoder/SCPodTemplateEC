@@ -51,20 +51,7 @@ module Pod
       # There has to be a single file in the Classes dir
       # or a framework won't be created
       `touch Pod/Classes/HCYMediator+Ext.swift`
-      `echo '// \
-      //  HCYMediator+Ext.swift \
-      //  ${POD_NAME} \
-      // \
-      //  Created by ${USER_NAME} on ${DATE}. \
-      // \
-       \
-      import HCYMediatorKit \
-          \
-      public extension HCYMediator { \
-          @objc func ${POD_NAME}Controller(parameters: [String: Any]?, callback: @escaping ([String: Any]) -> Void) -> UIViewController? { \
-              return nil \
-          } \
-      }' >> Pod/Classes/HCYMediator+Ext.swift`
+      `echo '//\n//  HCYMediator+Ext.swift\n//  #{pod_name}\n//\n//  Created by #{user_name} on #{date}.\n//\nimport HCYMediatorKit\npublic extension HCYMediator {\n    @objc func #{pod_name}Controller(parameters _: [String: Any]?, callback _: @escaping ([String: Any]) -> Void) -> UIViewController? {\n        return nil\n    }\n}' >> Pod/Classes/HCYMediator+Ext.swift`
       
       `mv ./templates/swift/* ./`
 
